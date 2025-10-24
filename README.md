@@ -1,4 +1,4 @@
-## # [DS5]LangchainThon
+## [DS5]LangchainThon
 "내가해" 팀의 모두봇 프로젝트입니다!
 
 ## 📖 Introduce
