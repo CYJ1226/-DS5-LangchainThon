@@ -303,8 +303,11 @@ rag_core_chain = create_retrieval_chain(history_aware_retriever, question_answer
 # ============================== #
 #       SESSION / HISTORY        #
 # ============================== #
-store = {}
+if "lc_store" not in st.session_state:
+    st.session_state["lc_store"] = {}  
+
 def get_session_history(session_id: str) -> BaseChatMessageHistory:
+    store = st.session_state["lc_store"]  
     if session_id not in store:
         store[session_id] = ChatMessageHistory()
     return store[session_id]
